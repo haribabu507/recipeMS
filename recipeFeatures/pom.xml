@@ -25,6 +25,11 @@
             <version>${karate.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.graalvm.truffle</groupId>
+            <artifactId>truffle-api</artifactId>
+            <version>22.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>
