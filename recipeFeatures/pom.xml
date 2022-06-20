@@ -15,7 +15,7 @@
         <java.version>1.8</java.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.surefire.version>2.22.2</maven.surefire.version>
-        <karate.version>1.2.0</karate.version>
+        <karate.version>1.1.0</karate.version>
     </properties>
 
     <dependencies>
@@ -24,11 +24,6 @@
             <artifactId>karate-junit5</artifactId>
             <version>${karate.version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.graalvm.truffle</groupId>
-            <artifactId>truffle-api</artifactId>
-            <version>22.0.0</version>
         </dependency>
     </dependencies>
 

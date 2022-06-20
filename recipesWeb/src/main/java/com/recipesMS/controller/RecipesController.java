@@ -34,7 +34,7 @@ public class RecipesController {
 	}
 	
 	@GetMapping(path ="/getRecipesByCategory", produces = "application/json")
-	public ResponseEntity<Recipe> getRecipesByCategory(@RequestParam ("categoryType") String categoryType) {
+	public ResponseEntity<List<Recipe>> getRecipesByCategory(@RequestParam ("categoryType") String categoryType) {
 		return new ResponseEntity<>(recipesService.getRecipesByCategory(categoryType), HttpStatus.OK);
 		
 	}

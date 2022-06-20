@@ -38,7 +38,7 @@ public class RecipesService {
 		return list;
 	}
 
-	public Recipe getRecipesByCategory(String categoryType) {
+	public List<Recipe> getRecipesByCategory(String categoryType) {
 		return recipeMangerRepository.findByCategory(categoryType);
 	}
 
