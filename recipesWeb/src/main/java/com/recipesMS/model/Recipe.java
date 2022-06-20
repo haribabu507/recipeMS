@@ -26,7 +26,7 @@ public class Recipe {
 	@Column
 	private String servings;
 
-	@OneToMany(targetEntity = Ingredient.class, cascade=CascadeType.ALL)
+	@OneToMany(targetEntity = Ingredient.class, cascade={CascadeType.ALL}, orphanRemoval = true)
 	@PrimaryKeyJoinColumn(name = "recipeName", referencedColumnName = "recipeId")
 	private List<Ingredient> ingredients;
 

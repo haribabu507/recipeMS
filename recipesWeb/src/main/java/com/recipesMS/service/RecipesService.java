@@ -45,7 +45,8 @@ public class RecipesService {
 	public Recipe updateRecipeByName(String recipeName, RecipeRequest newRecipeName) {
 
 		Recipe recipe = recipeMangerRepository.findByRecipeName(recipeName);
-		recipe.setIngredients(newRecipeName.getRecipe().getIngredients());
+		recipe.getIngredients().clear();
+		recipe.getIngredients().addAll(newRecipeName.getRecipe().getIngredients());
 		recipe.setCategory(newRecipeName.getRecipe().getCategory());
 		recipe.setInstructions(newRecipeName.getRecipe().getInstructions());
 		return recipeRepository.save(recipe);
